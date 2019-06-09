@@ -2,6 +2,7 @@ package com.endava.myapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.endava.myapplication.slider.AppIntroSampleSlider;
@@ -16,15 +17,16 @@ public class MyIntro extends AppIntro {
         addSlide(AppIntroSampleSlider.newInstance(R.layout.app_intro_employee));
         addSlide(AppIntroSampleSlider.newInstance(R.layout.app_intro_client));
         addSlide(AppIntroSampleSlider.newInstance(R.layout.app_intro_interviewee));
+//        addSlide(AppIntroSampleSlider.newInstance(R.layout.beacon_scan));
 
 // Show and Hide Skip and Done buttons
-        showStatusBar(false);
+        showStatusBar(true);
         showSkipButton(false);
 
 // Turn vibration on and set intensity
         // You will need to add VIBRATE permission in Manifest file
-        setVibrate(true);
-        setVibrateIntensity(30);
+        setVibrate(false);
+//        setVibrateIntensity(30);
 
 //Add animation to the intro slider
         setDepthAnimation();
@@ -39,10 +41,6 @@ public class MyIntro extends AppIntro {
         startActivity(i);
     }
 
-    @Override
-    public void onNextPressed() {
-        // Do something here when users click or tap on Next button.
-    }
 
     @Override
     public void onDonePressed() {
@@ -52,6 +50,10 @@ public class MyIntro extends AppIntro {
 
     @Override
     public void onSlideChanged() {
-        // Do something here when slide is changed
+//        // Do something here when slide is changed
+//
+//        TextView txtView = (TextView) findViewById(R.id.beacon_distance);
+//        txtView.setText("backend text");
     }
+
 }

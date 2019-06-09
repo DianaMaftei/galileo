@@ -1,4 +1,29 @@
 <resources>
     <string name="app_name">Galileo</string>
     <string name="app_intro_skip">Skip</string>
+    <string name="intro_msg">Hello World!nAdd Introduction about app at first when user open very first time. Describing app features and how to use app and so on.</string>
+    <string name="welcome_msg">Welcome to    </string>
+    <string name="employee_into_msg">Hi! I am Galileo, your virtual guide to discovering your workplace.</string>
+    <string name="employee_teams_msg">I can help you get to know the teams around you and the cool things they\'re working with.</string>
+    <string name="employee_office_floor_msg">Find your way around the office on any floor. Quickly get to the sports room, kitchen or meeting rooms.</string>
+    <string name="employee_emp_locator_msg">Don\'t know where you can find a colleague? Use the employee locator and our AR guide will lead you stragiht to their desk.</string>
+    <string name="employee_outro_msg">Come along on a journey with us to explore Endava!</string>
+
+    <string name="client_into_msg">Hi! I am Galileo, your virtual guide to discovering our company.</string>
+    <string name="client_clients_msg">Let me take you on a tour to meet some of our top clients from industries like finance, healthcare, retail and telecommunications.</string>
+    <string name="client_office_floor_msg">Find your way around the office on any floor, in any Endava building around the world.</string>
+    <string name="client_technologies_msg">Get to know some of our teams and take a look at the technologies our developers have in the toolbelt.</string>
+    <string name="client_outro_msg">Come along on a journey with us to explore your future business partner!</string>
+
+    <string name="interviewee_into_msg">Hi! I am Galileo, your virtual guide to discovering our company.</string>
+    <string name="interviewee_office_floor_msg">We invite you to explore this floor, to take a look at the facilities our developers have at their disposal.</string>
+    <string name="interviewee_technologies_msg">Feel free to walk around and get to know some of our teams and take a look at the technologies our developers work with.</string>
+    <string name="interviewee_interview_msg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim auctor nisl sed convallis. In urna ex, sagittis id lacinia vitae, condimentum sit amet leo.</string>
+    <string name="interviewee_outro_msg">Come along on a journey with us to explore your prospect future workplace!</string>
+
+
+    <string name="journeys_title_msg">Explore Endava</string>
+    <string name="journeys_tech_msg">Discover our clients and technologies</string>
+    <string name="journeys_map_msg">Find your way around</string>
+
 </resources>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#de411b</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="endavaOrange">#de411b</color>
+    <color name="endavaGray">#49525B</color>
+    <color name="bgColor">#F5F4F4</color>
 </resources>

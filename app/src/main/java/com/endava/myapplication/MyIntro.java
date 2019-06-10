@@ -50,10 +50,8 @@ public class MyIntro extends AppIntro {
 
     @Override
     public void onSlideChanged() {
-//        // Do something here when slide is changed
-//
-//        TextView txtView = (TextView) findViewById(R.id.beacon_distance);
-//        txtView.setText("backend text");
+        // Do something here when slide is changed
+
     }
 
 }

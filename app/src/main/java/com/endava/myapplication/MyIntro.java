@@ -17,7 +17,6 @@ public class MyIntro extends AppIntro {
         addSlide(AppIntroSampleSlider.newInstance(R.layout.app_intro_employee));
         addSlide(AppIntroSampleSlider.newInstance(R.layout.app_intro_client));
         addSlide(AppIntroSampleSlider.newInstance(R.layout.app_intro_interviewee));
-//        addSlide(AppIntroSampleSlider.newInstance(R.layout.beacon_scan));
 
 // Show and Hide Skip and Done buttons
         showStatusBar(true);
@@ -50,10 +49,8 @@ public class MyIntro extends AppIntro {
 
     @Override
     public void onSlideChanged() {
-//        // Do something here when slide is changed
-//
-//        TextView txtView = (TextView) findViewById(R.id.beacon_distance);
-//        txtView.setText("backend text");
+        // Do something here when slide is changed
+
     }
 
 }

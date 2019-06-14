@@ -25,5 +25,7 @@
     <string name="journeys_title_msg">Explore Endava</string>
     <string name="journeys_tech_msg">Discover our clients and technologies</string>
     <string name="journeys_map_msg">Find your way around</string>
+    <string name="title_activity_nfc">NfcActivity</string>
+    <string name="action_settings">Settings</string>
 
 </resources>

@@ -20,55 +20,67 @@
         android:textSize="32sp" />
 
     <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="200dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="16dp"
-        android:orientation="horizontal">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:padding="30dp">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:layout_weight="3"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:src="@drawable/undraw_goals_w8tw" />
+        <LinearLayout
+            android:id="@+id/findColleagueMainOption"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_weight="1">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:layout_weight="3"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:src="@drawable/undraw_map_1r69" />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
+                <ImageView
+                    android:id="@+id/findColleagueImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="110dp"
+                    android:src="@drawable/undraw_goals_w8tw" />
 
-    </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/findColleagueImg"
+                    android:gravity="center"
+                    android:text="@string/journeys_tech_msg"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="16dp"
-        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/findWayAroundMainOption"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_weight="1">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:text="@string/journeys_tech_msg" />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:text="@string/journeys_map_msg" />
+                <ImageView
+                    android:id="@+id/mapImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="110dp"
+                    android:src="@drawable/undraw_map_1r69" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/mapImg"
+                    android:gravity="center"
+                    android:text="@string/journeys_map_msg"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>

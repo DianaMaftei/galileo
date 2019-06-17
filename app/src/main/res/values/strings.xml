@@ -26,4 +26,11 @@
     <string name="journeys_tech_msg">Discover our clients and technologies</string>
     <string name="journeys_map_msg">Find your way around</string>
 
+    <string name="option_find_a_colleague_msg">Find a colleague</string>
+    <string name="option_find_meeting_room_msg">Find a meeting room</string>
+    <string name="option_find_a_team_msg">Find a team</string>
+    <string name="option_find_the_kitchen_msg">Find the kitchen</string>
+    <string name="option_find_the_sports_room_msg">Find the sports room</string>
+    <string name="option_find_reception_msg">Find the reception</string>
+
 </resources>

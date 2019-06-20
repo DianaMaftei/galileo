@@ -14,21 +14,34 @@ public class MyIntro extends AppIntro {
     public void init(Bundle savedInstanceState) {
 
 //adding the three slides for introduction app you can ad as many you needed
-        addSlide(AppIntroSampleSlider.newInstance(R.layout.app_intro_employee));
-        addSlide(AppIntroSampleSlider.newInstance(R.layout.app_intro_client));
-        addSlide(AppIntroSampleSlider.newInstance(R.layout.app_intro_interviewee));
+
+        String role = getIntent().getStringExtra("role");
+        if (role != null) {
+            switch (role) {
+                case "client":
+                    addSlide(AppIntroSampleSlider.newInstance(R.layout.app_intro_client));
+                    break;
+                case "employee":
+                    addSlide(AppIntroSampleSlider.newInstance(R.layout.app_intro_employee));
+                    break;
+                case "interviewee":
+                    addSlide(AppIntroSampleSlider.newInstance(R.layout.app_intro_interviewee));
+                    break;
+            }
 
 // Show and Hide Skip and Done buttons
-        showStatusBar(true);
-        showSkipButton(false);
+            showStatusBar(true);
+            showSkipButton(false);
 
 // Turn vibration on and set intensity
-        // You will need to add VIBRATE permission in Manifest file
-        setVibrate(false);
+            // You will need to add VIBRATE permission in Manifest file
+            setVibrate(false);
 //        setVibrateIntensity(30);
 
 //Add animation to the intro slider
-        setDepthAnimation();
+            setDepthAnimation();
+        }
+
     }
 
     @Override

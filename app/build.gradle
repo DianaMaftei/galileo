@@ -19,6 +19,9 @@ android {
     }
 }
 
+repositories {
+    jcenter()
+}
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.0.2'
@@ -28,4 +31,5 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'com.github.paolorotolo:appintro:4.1.0'
+    implementation 'org.altbeacon:android-beacon-library:2+'
 }

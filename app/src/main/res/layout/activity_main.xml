@@ -33,7 +33,8 @@
             android:layout_weight="3"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:src="@drawable/undraw_goals_w8tw" />
+            android:src="@drawable/undraw_goals_w8tw"
+            android:onClick="launchBeacons"/>
 
         <ImageView
             android:layout_width="wrap_content"
@@ -41,7 +42,8 @@
             android:layout_weight="3"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:src="@drawable/undraw_map_1r69" />
+            android:src="@drawable/undraw_map_1r69"
+            />
 
 
     </LinearLayout>

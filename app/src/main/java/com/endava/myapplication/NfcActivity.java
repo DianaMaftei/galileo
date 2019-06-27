@@ -2,11 +2,13 @@ package com.endava.myapplication;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.nfc.NdefMessage;
 import android.nfc.NdefRecord;
 import android.nfc.NfcAdapter;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -25,6 +27,11 @@ public class NfcActivity extends Activity {
         }
     }
 
+    public void launchIntro(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("role", view.getTag().toString());
+        startActivity(intent);
+    }
 
     private void handleNfcIntent(Intent NfcIntent) {
         if (NfcAdapter.ACTION_NDEF_DISCOVERED.equals(NfcIntent.getAction())) {

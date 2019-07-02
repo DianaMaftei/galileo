@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void launchBeacons(View view) {
-        Intent i = new Intent(MainActivity.this, Beacons.class);
+        Intent i = new Intent(MainActivity.this, BeaconsActivity.class);
         startActivity(i);
     }
 

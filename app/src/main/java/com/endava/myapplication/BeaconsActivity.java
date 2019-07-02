@@ -117,7 +117,7 @@ import org.altbeacon.beacon.Region;
 
 import java.util.Collection;
 
-public class Beacons extends Activity implements BeaconConsumer {
+public class BeaconsActivity extends Activity implements BeaconConsumer {
     private static final int PERMISSION_REQUEST_COARSE_LOCATION = 1;
 
     protected static final String TAG = "BeaconsActivity";

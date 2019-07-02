@@ -66,6 +66,9 @@
         <activity
             android:name=".MainOptionsActivity"
             android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".SearchActivity"
+            android:theme="@style/FullscreenTheme" />
     </application>
 
 </manifest>

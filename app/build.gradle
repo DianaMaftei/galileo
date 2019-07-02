@@ -5,7 +5,7 @@ android {
     buildToolsVersion "29.0.0"
     defaultConfig {
         applicationId "com.endava.myapplication"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -32,4 +32,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'com.github.paolorotolo:appintro:4.1.0'
     implementation 'org.altbeacon:android-beacon-library:2+'
+    implementation 'com.github.mancj:MaterialSearchBar:0.8.2'
+    implementation 'com.readystatesoftware.sqliteasset:sqliteassethelper:+'
 }

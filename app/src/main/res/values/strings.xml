@@ -28,4 +28,11 @@
     <string name="title_activity_nfc">NfcActivity</string>
     <string name="action_settings">Settings</string>
 
+    <string name="option_find_a_colleague_msg">Find a colleague</string>
+    <string name="option_find_meeting_room_msg">Find a meeting room</string>
+    <string name="option_find_a_team_msg">Find a team</string>
+    <string name="option_find_the_kitchen_msg">Find the kitchen</string>
+    <string name="option_find_the_sports_room_msg">Find the sports room</string>
+    <string name="option_find_reception_msg">Find the reception</string>
+
 </resources>

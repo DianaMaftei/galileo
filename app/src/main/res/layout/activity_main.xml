@@ -43,6 +43,7 @@
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:src="@drawable/undraw_map_1r69"
+            android:id="@+id/findWayAroundMainOption"
             />
 
 

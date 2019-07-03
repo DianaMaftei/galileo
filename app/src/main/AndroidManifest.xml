@@ -27,6 +27,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <service
+            android:name=".BeaconLocationService"
+            android:enabled="true"
+            android:exported="true"></service>
         <activity android:name=".BeaconsActivity">
             <!--<intent-filter>-->
                 <!--<action android:name="android.intent.action.MAIN" />-->

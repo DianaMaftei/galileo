@@ -96,12 +96,14 @@ package com.endava.myapplication;
 import android.Manifest;
 import android.app.Activity;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.core.app.ActivityCompat;
+import androidx.annotation.RequiresApi;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 public class BeaconsActivity extends Activity {
 
@@ -109,17 +111,23 @@ public class BeaconsActivity extends Activity {
     protected static final String TAG = "RangingActivity";
     BeaconLocation beaconLocation;
     TextView distanceValue;
+    ConstraintLayout layout;
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.beacons);
         distanceValue = new TextView(this);
-        distanceValue = (TextView)findViewById(R.id.distValue);
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+        distanceValue = findViewById(R.id.distValue);
+        layout = findViewById(R.id.layout1);
+        if (this.checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
 
+//            Snackbar snackbar = Snackbar.make(layout, "Allow application to use your location", Snackbar.LENGTH_SHORT);
+//            snackbar.show();
             Toast.makeText(this, "Allow application to use your location", Toast.LENGTH_LONG).show();
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, LOCATION_PERMISION);
+            requestPermissions(new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, LOCATION_PERMISION);
+
 
         } else {
             beaconLocation =  new BeaconLocation(this);
@@ -136,6 +144,7 @@ public class BeaconsActivity extends Activity {
         }
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -155,6 +164,7 @@ public class BeaconsActivity extends Activity {
 
                 } else {
                     Toast.makeText(this, "Location denied", Toast.LENGTH_LONG).show();
+                    requestPermissions(new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, LOCATION_PERMISION);
                 }
                 break;
 

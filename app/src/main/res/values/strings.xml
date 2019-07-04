@@ -34,5 +34,8 @@
     <string name="option_find_the_kitchen_msg">Find the kitchen</string>
     <string name="option_find_the_sports_room_msg">Find the sports room</string>
     <string name="option_find_reception_msg">Find the reception</string>
+    <string name="title_activity_welcome">WelcomeActivity</string>
+
+    <string name="meet_manager_msg">Meet your manager</string>
 
 </resources>

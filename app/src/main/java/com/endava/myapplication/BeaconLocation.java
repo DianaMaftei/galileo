@@ -6,8 +6,20 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.ArrayMap;
+import android.widget.TextView;
 
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+
+import com.endava.myapplication.triangulation.Beacon;
+import com.endava.myapplication.triangulation.CartesianBeacon;
+import com.endava.myapplication.triangulation.CartesianPosition;
+import com.endava.myapplication.triangulation.CartesianPositionCalculator;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class BeaconLocation {
 
@@ -19,7 +31,7 @@ public class BeaconLocation {
     }
 
     public interface BeaconDistanceListener {
-        void onDataSend(double distance);
+        void onDataSend(CartesianPosition beaconIds);
 
     }
 
@@ -35,10 +47,33 @@ public class BeaconLocation {
             @Override
             public void onReceive(Context context, Intent intent) {
 
-                Bundle extra = intent.getBundleExtra("DISTANCE");
-                double distanceToBeacon = extra.getDouble("distance_val");
+                HashMap<String, Double> beacons = (HashMap<String, Double>) intent.getSerializableExtra("INFO");
 
-                listenerBeaconDistance.onDataSend(distanceToBeacon);
+                Map<Beacon<CartesianPosition>, Double> map = new HashMap<>();
+                if (beacons.size() != 0) {
+                    for (String beaconId : beacons.keySet()) {
+                        if (beaconId.startsWith("42")) {
+                            CartesianPosition cartesianPosition1 = new CartesianPosition(0, 0);
+                            Beacon<CartesianPosition> cartesianBeacon1 = new CartesianBeacon(cartesianPosition1);
+                            map.put(cartesianBeacon1, beacons.get(beaconId));
+                        }
+                        if (beaconId.startsWith("0x02")) {
+                            CartesianPosition cartesianPosition1 = new CartesianPosition(1, 1);
+                            Beacon<CartesianPosition> cartesianBeacon1 = new CartesianBeacon(cartesianPosition1);
+                            map.put(cartesianBeacon1, beacons.get(beaconId));
+                        }
+                        if (beaconId.startsWith("0x00")) {
+                            CartesianPosition cartesianPosition1 = new CartesianPosition(0, 1);
+                            Beacon<CartesianPosition> cartesianBeacon1 = new CartesianBeacon(cartesianPosition1);
+                            map.put(cartesianBeacon1, beacons.get(beaconId));
+                        }
+                    }
+                }
+                if(map.size() > 2) {
+                    CartesianPosition cartesianPosition = new CartesianPositionCalculator(5).getPosition(map);
+                    listenerBeaconDistance.onDataSend(cartesianPosition);
+                }
+
 
             }
         }, new IntentFilter("DISTANCE_DATA"));

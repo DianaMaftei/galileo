@@ -98,12 +98,15 @@ import android.app.Activity;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.constraintlayout.widget.ConstraintLayout;
+
+import com.endava.myapplication.triangulation.CartesianPosition;
 
 public class BeaconsActivity extends Activity {
 
@@ -118,8 +121,7 @@ public class BeaconsActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.beacons);
-        distanceValue = new TextView(this);
-        distanceValue = findViewById(R.id.distValue);
+        distanceValue = findViewById(R.id.position_label);
         layout = findViewById(R.id.layout1);
         if (this.checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
 
@@ -133,14 +135,7 @@ public class BeaconsActivity extends Activity {
             beaconLocation =  new BeaconLocation(this);
 
             beaconLocation.startService();
-            beaconLocation.setBeaconDistanceListener(new BeaconLocation.BeaconDistanceListener() {
-                @Override
-                public void onDataSend(double distance) {
-                    distanceValue.setText(Double.toString(distance));
-                }
-            });
-
-
+            beaconLocation.setBeaconDistanceListener(position -> distanceValue.setText(position.toString()));
         }
     }
 
@@ -154,13 +149,7 @@ public class BeaconsActivity extends Activity {
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     beaconLocation =  new BeaconLocation(this);
                     beaconLocation.startService();
-                    beaconLocation.setBeaconDistanceListener(new BeaconLocation.BeaconDistanceListener() {
-                        @Override
-                        public void onDataSend(double distance) {
-                            distanceValue.setText(Double.toString(distance));
-                        }
-                    });
-
+                    beaconLocation.setBeaconDistanceListener(position -> distanceValue.setText(position.toString()));
 
                 } else {
                     Toast.makeText(this, "Location denied", Toast.LENGTH_LONG).show();

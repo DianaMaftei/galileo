@@ -12,6 +12,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.RemoteException;
+import android.util.ArrayMap;
 import android.util.Log;
 
 import androidx.core.app.ActivityCompat;
@@ -26,8 +27,15 @@ import org.altbeacon.beacon.Identifier;
 import org.altbeacon.beacon.RangeNotifier;
 import org.altbeacon.beacon.Region;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 public class BeaconLocationService extends Service implements BeaconConsumer, RangeNotifier {
 
@@ -68,12 +76,16 @@ public class BeaconLocationService extends Service implements BeaconConsumer, Ra
         if(mBeaconManager == null)
         {
             mBeaconManager =  BeaconManager.getInstanceForApplication(getApplicationContext());
-            mBeaconManager.setBackgroundScanPeriod(500);
-            mBeaconManager.setForegroundScanPeriod(500);
+            mBeaconManager.setBackgroundScanPeriod(2000);
+            mBeaconManager.setForegroundScanPeriod(2000);
             mBeaconManager.getBeaconParsers().add(new BeaconParser().
                     setBeaconLayout("m:2-3=beac,i:4-19,i:20-21,i:22-23,p:24-24,d:25-25"));
             mBeaconManager.getBeaconParsers().add(new BeaconParser().
                     setBeaconLayout("m:2-3=0215,i:4-19,i:20-21,i:22-23,p:24-24"));
+            mBeaconManager.getBeaconParsers().add(new BeaconParser().
+                    setBeaconLayout("s:0-1=feaa,m:2-2=10,p:3-3:-41,i:4-20v"));
+            mBeaconManager.getBeaconParsers().add(new BeaconParser().
+                    setBeaconLayout("s:0-1=feaa,m:2-2=00,p:3-3:-41,i:4-13,i:14-19"));
             mBeaconManager.bind(this);
         }
 
@@ -130,8 +142,22 @@ public class BeaconLocationService extends Service implements BeaconConsumer, Ra
 
             Bundle extra = new Bundle();
             extra.putDouble("distance_val", beacons.iterator().next().getDistance());
+
+            String[] beaconsIds = beacons.stream()
+                    .map(beacon -> beacon.getId1().toString())
+                    .toArray(String[]::new);
+            extra.putStringArray("BEACON_IDS", beaconsIds);
+
+            Map<String, Double> beaconsInfo = beacons.stream()
+                    .collect(Collectors.toMap(
+                            beacon-> beacon.getIdentifier(0).toString(), Beacon::getDistance)
+                    );
+
+            HashMap<String, Double> beaconsHashMap = new HashMap<>();
+            beaconsHashMap.putAll(beaconsInfo);
+
             Intent intent = new Intent("DISTANCE_DATA");
-            intent.putExtra("DISTANCE",extra);
+            intent.putExtra("INFO", beaconsHashMap);
             LocalBroadcastManager.getInstance(BeaconLocationService.this).sendBroadcast(intent);
         }
     }

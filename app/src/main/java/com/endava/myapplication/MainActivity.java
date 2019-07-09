@@ -1,16 +1,14 @@
 package com.endava.myapplication;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.LinearLayout;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    Context mcontext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,9 +16,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Intent i = new Intent(MainActivity.this, MyIntro.class);
+        i.putExtra("role", getIntent().getStringExtra("role"));
         startActivity(i);
 
-        LinearLayout menu_photos = findViewById(R.id.findWayAroundMainOption);
+        ImageView menu_photos = findViewById(R.id.findWayAroundMainOption);
         menu_photos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -29,6 +28,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(picture_intent );
             }
         });
-
     }
+
+    public void launchBeacons(View view) {
+        Intent i = new Intent(MainActivity.this, BeaconsActivity.class);
+        startActivity(i);
+    }
+
 }

@@ -15,7 +15,7 @@
         android:paddingLeft="16dp"
         android:paddingTop="100dp"
         android:paddingRight="16dp"
-        android:text="@string/meet_manager_msg"
+        android:text="@string/onboarding_meet_manager_msg"
         android:textColor="@color/endavaOrange"
         android:textSize="32sp" />
 

@@ -43,6 +43,7 @@
     <string name="onboarding_office_tour_msg">Office Tour</string>
     <string name="onboarding_ITS_msg">Get your Laptop</string>
     <string name="onboarding_CC_msg">Coffee with your Career Coach</string>
+    <string name="title_activity_onboarding_journeys">OnboardingJourneys</string>
 
 
 </resources>

@@ -20,14 +20,19 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
 
         ImageView menu_photos = findViewById(R.id.findWayAroundMainOption);
-        menu_photos.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                System.out.println("cliiiick");
-                Intent picture_intent = new Intent(MainActivity.this, MainOptionsActivity.class);
-                startActivity(picture_intent );
-            }
+        menu_photos.setOnClickListener(v -> {
+            System.out.println("cliiiick");
+            Intent picture_intent = new Intent(MainActivity.this, MainOptionsActivity.class);
+            startActivity(picture_intent );
         });
+
+        ImageView menu_onboarding = findViewById(R.id.newJoinerMainOption);
+        menu_onboarding.setOnClickListener(v -> {
+            System.out.println("cliiiick");
+            Intent picture_intent = new Intent(MainActivity.this, OnboardingActivity.class);
+            startActivity(picture_intent );
+        });
+
     }
 
     public void launchBeacons(View view) {

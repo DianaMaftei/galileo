@@ -28,9 +28,14 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
+            android:name=".OnboardingJourneys"
+            android:label="@string/title_activity_onboarding_journeys"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".OnboardingActivity" />
+        <activity
             android:name=".WelcomeActivity"
             android:label="@string/title_activity_welcome"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <service
             android:name=".BeaconLocationService"

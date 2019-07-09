@@ -8,102 +8,97 @@
     android:background="@color/bgColor"
     android:orientation="vertical">
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="673dp"
+        android:orientation="vertical"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="16dp"
+            android:paddingTop="80dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="20dp"
+            android:text="@string/journeys_title_msg"
+            android:textColor="@color/endavaOrange"
+            android:textSize="32sp" />
+
+        <LinearLayout
+            android:layout_width="390dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="16dp"
+            android:orientation="horizontal"
+            android:paddingEnd="25dp">
+
+
+            <ImageView
+                android:id="@+id/newJoinerMainOption"
+                android:layout_width="290dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="3"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:src="@drawable/undraw_setup_wizard_r6mr" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:paddingLeft="10dp"
+                android:paddingTop="60dp"
+                android:paddingRight="10dp"
+                android:text="@string/journeys_onboarding_msg"
+                android:textColor="@color/endavaOrange"
+                android:textSize="@dimen/box_size"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="389dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="16dp"
+            android:orientation="horizontal"
+            android:paddingEnd="25dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:paddingLeft="10dp"
+                android:paddingTop="60dp"
+                android:paddingRight="10dp"
+                android:text="@string/journeys_map_msg"
+                android:textColor="@color/endavaOrange"
+                android:textSize="@dimen/box_size"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/findWayAroundMainOption"
+                android:layout_width="210dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="3"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:src="@drawable/undraw_map_1r69" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
     <TextView
+        android:id="@+id/footer"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:paddingLeft="16dp"
-        android:paddingTop="80dp"
-        android:paddingBottom="20dp"
-        android:paddingRight="16dp"
-        android:text="@string/journeys_title_msg"
-        android:textColor="@color/endavaOrange"
-        android:textSize="32sp" />
-
-    <LinearLayout
-        android:layout_width="390dp"
-        android:layout_height="150dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="16dp"
-        android:onClick="launchBeacons"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:layout_width="310dp"
-            android:layout_height="fill_parent"
-            android:layout_weight="3"
-            android:paddingLeft="10dp"
-            android:paddingRight="20dp"
-            android:src="@drawable/undraw_goals_w8tw" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:paddingTop="50dp"
-            android:text="@string/journeys_tech_msg"
-            android:textColor="@color/endavaOrange" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="389dp"
-        android:layout_height="150dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="16dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:paddingTop="60dp"
-            android:text="@string/journeys_map_msg"
-            android:textColor="@color/endavaOrange" />
-
-        <ImageView
-            android:id="@+id/findWayAroundMainOption"
-            android:layout_width="210dp"
-            android:layout_height="fill_parent"
-            android:layout_weight="3"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:src="@drawable/undraw_map_1r69" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="390dp"
-        android:layout_height="150dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="16dp"
-        android:orientation="horizontal">
-
-
-        <ImageView
-            android:id="@+id/newJoinerMainOption"
-            android:layout_width="290dp"
-            android:layout_height="fill_parent"
-            android:layout_weight="3"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:src="@drawable/undraw_setup_wizard_r6mr" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:paddingTop="60dp"
-            android:text="@string/journeys_onboarding_msg"
-            android:textColor="@color/endavaOrange" />
-    </LinearLayout>
+        android:layout_height="63dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/endavaOrange" />
 
 </LinearLayout>

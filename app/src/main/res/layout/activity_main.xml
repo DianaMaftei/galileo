@@ -56,6 +56,15 @@
         android:layout_marginRight="16dp"
         android:orientation="horizontal">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="60dp"
+            android:text="@string/journeys_map_msg"
+            android:textColor="@color/endavaOrange" />
 
         <ImageView
             android:id="@+id/findWayAroundMainOption"
@@ -66,15 +75,6 @@
             android:paddingRight="10dp"
             android:src="@drawable/undraw_map_1r69" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:paddingTop="60dp"
-            android:text="@string/journeys_map_msg"
-            android:textColor="@color/endavaOrange" />
     </LinearLayout>
 
     <LinearLayout

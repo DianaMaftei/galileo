@@ -12,23 +12,24 @@
         android:layout_width="wrap_content"
         android:layout_height="673dp"
         android:orientation="vertical"
-        android:paddingTop="30dp"
+        android:paddingTop="5dp"
         android:paddingBottom="30dp">
 
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:paddingLeft="16dp"
-            android:paddingTop="80dp"
-            android:paddingRight="16dp"
+            android:paddingLeft="8dp"
+            android:paddingTop="60dp"
+            android:paddingRight="8dp"
             android:paddingBottom="20dp"
             android:text="@string/journeys_title_msg"
             android:textColor="@color/endavaOrange"
-            android:textSize="32sp" />
+            android:textSize="@dimen/title"
+            android:textAlignment="center"/>
 
         <LinearLayout
-            android:layout_width="390dp"
+            android:layout_width="362dp"
             android:layout_height="150dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="10dp"
@@ -39,28 +40,30 @@
 
             <ImageView
                 android:id="@+id/newJoinerMainOption"
-                android:layout_width="290dp"
-                android:layout_height="fill_parent"
+                android:layout_width="184dp"
+                android:layout_height="126dp"
                 android:layout_weight="3"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
                 android:src="@drawable/undraw_setup_wizard_r6mr" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="146dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
                 android:paddingLeft="10dp"
                 android:paddingTop="60dp"
                 android:paddingRight="10dp"
                 android:text="@string/journeys_onboarding_msg"
+                android:textAlignment="center"
                 android:textColor="@color/endavaOrange"
-                android:textSize="@dimen/box_size"
+                android:textSize="@dimen/welcome_view"
                 android:textStyle="bold" />
         </LinearLayout>
 
+
         <LinearLayout
-            android:layout_width="389dp"
+            android:layout_width="363dp"
             android:layout_height="150dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="10dp"
@@ -69,21 +72,22 @@
             android:paddingEnd="25dp">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="174dp"
+                android:layout_height="113dp"
                 android:layout_weight="3"
-                android:paddingLeft="10dp"
+                android:paddingLeft="8dp"
                 android:paddingTop="60dp"
-                android:paddingRight="10dp"
+                android:paddingRight="8dp"
                 android:text="@string/journeys_map_msg"
+                android:textAlignment="center"
                 android:textColor="@color/endavaOrange"
-                android:textSize="@dimen/box_size"
+                android:textSize="@dimen/welcome_view"
                 android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/findWayAroundMainOption"
-                android:layout_width="210dp"
-                android:layout_height="fill_parent"
+                android:layout_width="169dp"
+                android:layout_height="113dp"
                 android:layout_weight="3"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
@@ -91,12 +95,45 @@
 
 
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="362dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="16dp"
+            android:orientation="horizontal"
+            android:paddingEnd="25dp">
+
+
+            <ImageView
+                android:id="@+id/calendar"
+                android:layout_width="178dp"
+                android:layout_height="116dp"
+                android:layout_weight="3"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:src="@drawable/vector_calendar_transparent" />
+
+            <TextView
+                android:layout_width="174dp"
+                android:layout_height="115dp"
+                android:layout_weight="3"
+                android:paddingLeft="8dp"
+                android:paddingTop="60dp"
+                android:paddingRight="8dp"
+                android:text="Consult your calendar"
+                android:textAlignment="center"
+                android:textColor="@color/endavaOrange"
+                android:textSize="@dimen/welcome_view"
+                android:textStyle="bold" />
+        </LinearLayout>
     </LinearLayout>
 
 
     <TextView
         android:id="@+id/footer"
-        android:layout_width="fill_parent"
+        android:layout_width="391dp"
         android:layout_height="63dp"
         android:layout_alignParentBottom="true"
         android:background="@color/endavaOrange" />

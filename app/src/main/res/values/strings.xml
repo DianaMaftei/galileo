@@ -44,6 +44,8 @@
     <string name="onboarding_ITS_msg">Get your Laptop</string>
     <string name="onboarding_CC_msg">Coffee with your Career Coach</string>
     <string name="title_activity_onboarding_journeys">OnboardingJourneys</string>
+    <string name="calendar_title">Calendar</string>
+    <string name="title_activity_calendar">CalendarActivity</string>
 
 
 </resources>

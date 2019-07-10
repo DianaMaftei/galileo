@@ -28,9 +28,13 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
+            android:name=".CalendarActivity"
+            android:label="@string/title_activity_calendar"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".OnboardingJourneys"
             android:label="@string/title_activity_onboarding_journeys"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".OnboardingActivity" />
         <activity
             android:name=".WelcomeActivity"

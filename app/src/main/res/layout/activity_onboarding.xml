@@ -9,12 +9,12 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:paddingLeft="16dp"
-        android:paddingTop="80dp"
+        android:paddingTop="60dp"
         android:paddingRight="16dp"
         android:paddingBottom="20dp"
         android:text="@string/onboarding_title_msg"
         android:textColor="@color/endavaOrange"
-        android:textSize="32sp" />
+        android:textSize="@dimen/title" />
 
 
     <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"

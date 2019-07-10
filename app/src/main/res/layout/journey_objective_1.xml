@@ -17,7 +17,7 @@
         android:paddingRight="16dp"
         android:text="@string/onboarding_meet_manager_msg"
         android:textColor="@color/endavaOrange"
-        android:textSize="32sp" />
+        android:textSize="@dimen/title" />
 
     <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
@@ -44,7 +44,7 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="150dp"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 

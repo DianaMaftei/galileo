@@ -3,29 +3,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:weightSum="3"
-    >
+    android:weightSum="3">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="52dp"
-        android:layout_marginBottom="10dp"
         android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
         android:src="@drawable/endava_logo" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
         android:layout_weight="1"
+        android:orientation="horizontal"
         android:padding="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
             android:layout_gravity="center"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="vertical">
 
             <RelativeLayout
                 android:layout_width="wrap_content"
@@ -39,21 +38,21 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_below="@id/findColleague"
-                    android:gravity="center"
                     android:layout_height="50dp"
+                    android:layout_below="@id/findColleague"
                     android:layout_alignParentBottom="true"
+                    android:gravity="center"
                     android:text="@string/option_find_a_colleague_msg"
-                    android:textSize="14sp"/>
+                    android:textSize="@dimen/find_your_way_around_text_size" />
             </RelativeLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
             android:layout_gravity="center"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="vertical">
 
             <RelativeLayout
                 android:layout_width="wrap_content"
@@ -67,28 +66,29 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_below="@id/teamImg"
-                    android:gravity="center"
-                    android:layout_alignParentBottom="true"
-                    android:text="@string/option_find_a_team_msg"
                     android:layout_height="50dp"
-                    android:textSize="14sp" />
+                    android:layout_below="@id/teamImg"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:text="@string/option_find_a_team_msg"
+                    android:textSize="@dimen/find_your_way_around_text_size" />
             </RelativeLayout>
         </LinearLayout>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
         android:layout_weight="1"
+        android:orientation="horizontal"
         android:padding="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
             android:layout_gravity="center"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="vertical">
 
             <RelativeLayout
                 android:layout_width="wrap_content"
@@ -107,16 +107,16 @@
                     android:layout_alignParentBottom="true"
                     android:gravity="center"
                     android:text="@string/option_find_the_kitchen_msg"
-                    android:textSize="14sp" />
+                    android:textSize="@dimen/find_your_way_around_text_size" />
             </RelativeLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
             android:layout_gravity="center"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="vertical">
 
             <RelativeLayout
                 android:layout_width="wrap_content"
@@ -135,7 +135,7 @@
                     android:layout_alignParentBottom="true"
                     android:gravity="center"
                     android:text="@string/option_find_the_sports_room_msg"
-                    android:textSize="14sp" />
+                    android:textSize="@dimen/find_your_way_around_text_size" />
             </RelativeLayout>
         </LinearLayout>
     </LinearLayout>
@@ -143,45 +143,16 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
         android:layout_weight="1"
+        android:orientation="horizontal"
         android:padding="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
             android:layout_gravity="center"
-
-            android:layout_weight="1">
-
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:id="@+id/meetingRoomImg"
-                    android:layout_width="wrap_content"
-                    android:layout_height="100dp"
-                    android:src="@drawable/undraw_business_plan_5i9d" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_below="@+id/meetingRoomImg"
-                    android:gravity="center"
-                    android:layout_alignParentBottom="true"
-                    android:text="@string/option_find_meeting_room_msg"
-                    android:textSize="14sp" />
-            </RelativeLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_gravity="center"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="vertical">
 
             <RelativeLayout
                 android:layout_width="wrap_content"
@@ -200,9 +171,39 @@
                     android:layout_alignParentBottom="true"
                     android:gravity="center"
                     android:text="@string/option_find_reception_msg"
-                    android:textSize="14sp" />
+                    android:textSize="@dimen/find_your_way_around_text_size"/>
             </RelativeLayout>
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/meetingRoomImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:src="@drawable/undraw_business_plan_5i9d" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/meetingRoomImg"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:text="@string/option_find_meeting_room_msg"
+                    android:textSize="@dimen/find_your_way_around_text_size" />
+            </RelativeLayout>
+        </LinearLayout>
+
     </LinearLayout>
 
     <TextView

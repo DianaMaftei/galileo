@@ -19,18 +19,22 @@ public class MainActivity extends AppCompatActivity {
         i.putExtra("role", getIntent().getStringExtra("role"));
         startActivity(i);
 
-        ImageView menu_photos = findViewById(R.id.findWayAroundMainOption);
-        menu_photos.setOnClickListener(v -> {
-            System.out.println("cliiiick");
-            Intent picture_intent = new Intent(MainActivity.this, MainOptionsActivity.class);
-            startActivity(picture_intent );
+        ImageView findYourWayAround = findViewById(R.id.findWayAroundMainOption);
+        findYourWayAround.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, MainOptionsActivity.class);
+            startActivity(intent);
         });
 
-        ImageView menu_onboarding = findViewById(R.id.newJoinerMainOption);
-        menu_onboarding.setOnClickListener(v -> {
-            System.out.println("cliiiick");
-            Intent picture_intent = new Intent(MainActivity.this, OnboardingActivity.class);
-            startActivity(picture_intent );
+        ImageView onboarding = findViewById(R.id.newJoinerMainOption);
+        onboarding.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, OnboardingActivity.class);
+            startActivity(intent);
+        });
+
+        ImageView calendar = findViewById(R.id.calendar);
+        calendar.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, CalendarActivity.class);
+            startActivity(intent);
         });
 
     }

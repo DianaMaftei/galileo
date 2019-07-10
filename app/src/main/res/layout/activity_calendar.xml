@@ -8,11 +8,11 @@
         android:layout_height="169dp"
         android:gravity="center"
         android:paddingLeft="16dp"
-        android:paddingTop="100dp"
+        android:paddingTop="60dp"
         android:paddingRight="16dp"
         android:text="@string/calendar_title"
         android:textColor="@color/endavaOrange"
-        android:textSize="32sp" />
+        android:textSize="@dimen/title" />
 
 
     <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -40,7 +40,7 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="150dp"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
@@ -123,7 +123,7 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="150dp"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
@@ -201,7 +201,7 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="150dp"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
@@ -279,7 +279,7 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="150dp"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
@@ -288,7 +288,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:gravity="center_vertical|start"
-                        android:text="Daily Meeting"
+                        android:text="Planning"
                         android:textAllCaps="true"
                         android:textSize="@dimen/card_view_text_size"
                         android:textStyle="bold" />
@@ -307,7 +307,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:gravity="center_vertical|start"
-                        android:text="15/07/2019 - 10:00"
+                        android:text="Tomorrow - 15:00"
                         android:textSize="@dimen/card_view_text_size"
                         android:textStyle="italic" />
                 </LinearLayout>

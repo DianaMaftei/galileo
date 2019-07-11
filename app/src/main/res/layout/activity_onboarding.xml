@@ -87,7 +87,7 @@
                     android:paddingEnd="10dp"
                     android:layout_gravity="end"
                     android:layout_marginBottom="0dp"
-                    android:src="@drawable/exclamation_circle" />
+                    android:src="@drawable/checked_c" />
 
             </LinearLayout>
         </LinearLayout>

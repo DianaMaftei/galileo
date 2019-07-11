@@ -22,12 +22,16 @@ public class OnboardingJourneys extends AppCompatActivity {
                 setContentView(R.layout.journey_objective_1);
                 break;
             case "option_2":
+                setContentView(R.layout.journey_objective_2);
                 break;
             case "option_3":
+                setContentView(R.layout.option_find_your_way_around);
                 break;
             case "option_4":
+                setContentView(R.layout.journey_objective_3);
                 break;
             case "option_5":
+                setContentView(R.layout.journey_objective_4);
                 break;
 
         }

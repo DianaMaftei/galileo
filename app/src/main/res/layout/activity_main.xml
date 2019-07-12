@@ -15,18 +15,41 @@
         android:paddingTop="5dp"
         android:paddingBottom="30dp">
 
-        <TextView
-            android:layout_width="fill_parent"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:paddingLeft="8dp"
-            android:paddingTop="60dp"
-            android:paddingRight="8dp"
-            android:paddingBottom="20dp"
-            android:text="@string/journeys_title_msg"
-            android:textColor="@color/endavaOrange"
-            android:textSize="@dimen/title"
-            android:textAlignment="center"/>
+            android:orientation="horizontal"
+            android:paddingLeft="40dp"
+            android:paddingTop="30dp"
+            android:paddingEnd="30dp">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingLeft="8dp"
+                android:paddingTop="30dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="20dp"
+                android:text="@string/journeys_title_msg"
+                android:textAlignment="center"
+                android:textColor="@color/endavaOrange"
+                android:textSize="@dimen/title" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingTop="25dp">
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="end"
+                    android:src="@drawable/info_button"
+                    android:id="@+id/info_button"/>
+            </LinearLayout>
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="362dp"
@@ -52,7 +75,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
                 android:paddingLeft="10dp"
-                android:paddingTop="60dp"
+                android:paddingTop="20dp"
                 android:paddingRight="10dp"
                 android:text="@string/journeys_onboarding_msg"
                 android:textAlignment="center"
@@ -76,7 +99,7 @@
                 android:layout_height="113dp"
                 android:layout_weight="3"
                 android:paddingLeft="8dp"
-                android:paddingTop="60dp"
+                android:paddingTop="35dp"
                 android:paddingRight="8dp"
                 android:text="@string/journeys_map_msg"
                 android:textAlignment="center"
@@ -120,7 +143,7 @@
                 android:layout_height="115dp"
                 android:layout_weight="3"
                 android:paddingLeft="8dp"
-                android:paddingTop="60dp"
+                android:paddingTop="25dp"
                 android:paddingRight="8dp"
                 android:text="Consult your calendar"
                 android:textAlignment="center"

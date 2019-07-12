@@ -47,6 +47,7 @@
     <string name="calendar_title">Calendar</string>
     <string name="title_activity_calendar">CalendarActivity</string>
     <string name="success_stories">Success stories</string>
+    <string name="title_activity_endava_info">EndavaInfoActivity</string>
 
 
 </resources>

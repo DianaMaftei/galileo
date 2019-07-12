@@ -5,6 +5,7 @@ import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 
 public class OnboardingActivity extends AppCompatActivity {
@@ -21,6 +22,11 @@ public class OnboardingActivity extends AppCompatActivity {
             intent.putExtra("ONBOARDING_OPTION", "option_1");
             startActivity(intent);
         });
+
+//        ImageView arManager = findViewById(R.id.ar_manager);
+//        arManager.setOnClickListener( v-> {
+//            setContentView(R.layout.ar_layout);
+//        });
 
         CardView journey_onboarding_1 = findViewById(R.id.objective_two);
         journey_onboarding_1.setOnClickListener(v -> {
@@ -53,7 +59,5 @@ public class OnboardingActivity extends AppCompatActivity {
             intent.putExtra("ONBOARDING_OPTION", "option_5");
             startActivity(intent);
         });
-
-
     }
 }

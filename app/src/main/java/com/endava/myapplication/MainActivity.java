@@ -16,7 +16,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Intent i = new Intent(MainActivity.this, MyIntro.class);
-        i.putExtra("role", getIntent().getStringExtra("role"));
+//        i.putExtra("role", getIntent().getStringExtra("role"));
+        i.putExtra("role", "employee");
         startActivity(i);
 
         ImageView findYourWayAround = findViewById(R.id.findWayAroundMainOption);
@@ -36,6 +37,14 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, CalendarActivity.class);
             startActivity(intent);
         });
+
+        ImageView endavaInfo = findViewById(R.id.info_button);
+        endavaInfo.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, EndavaInfoActivity.class);
+            startActivity(intent);
+        });
+
+
 
     }
 

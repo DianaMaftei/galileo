@@ -38,5 +38,8 @@ public class OnboardingJourneys extends AppCompatActivity {
 //        Toolbar toolbar = findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);
     }
+    public void navigateToAr(View v) {
+        setContentView(R.layout.ar_layout);
+    }
 
 }
